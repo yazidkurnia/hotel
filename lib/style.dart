@@ -28,3 +28,6 @@ TextStyle fontStyle5 =
 
 TextStyle fontStyle6 =
     GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 18);
+
+//* all about margin
+int defaultMarginLayout = 18;
