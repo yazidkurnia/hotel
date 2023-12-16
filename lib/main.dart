@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel/pages/auth/login_page.dart';
+import 'package:hotel/pages/auth/ui_login.dart';
+import 'package:hotel/pages/home/ui_home.dart';
 
 void main() => runApp(MyApp());
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // A widget which will be started on application startup
-      home: LoginPage(),
+      home: UiHome(),
     );
   }
 }

@@ -4,37 +4,37 @@ import 'package:hotel/pages/home/home.dart';
 import 'package:hotel/services/auth/auth_service.dart';
 import 'package:hotel/style.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class UiLogin extends StatefulWidget {
+  const UiLogin({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<UiLogin> createState() => _UiLoginState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _UiLoginState extends State<UiLogin> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
 
-  Future<bool> login(String email, String password) async {
-    try {
-      var data = await AuthService().loginProses(email, password);
-      if (data.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-            backgroundColor: Colors.red,
-            content: Text('Maaf akun tidak ditemukan')));
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-            backgroundColor: Colors.green, content: Text('Berhasil Login')));
-        Future.delayed(Duration(milliseconds: 3000), () {
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: ((context) => Home())));
-        });
-      }
-      return true;
-    } catch (e) {
-      throw (e);
-    }
-  }
+  // Future<bool> login(String email, String password) async {
+  //   try {
+  //     var data = await AuthService().loginProses(email, password);
+  //     if (data.isEmpty) {
+  //       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+  //           backgroundColor: Colors.red,
+  //           content: Text('Maaf akun tidak ditemukan')));
+  //     } else {
+  //       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+  //           backgroundColor: Colors.green, content: Text('Berhasil Login')));
+  //       Future.delayed(Duration(milliseconds: 3000), () {
+  //         Navigator.pushReplacement(
+  //             context, MaterialPageRoute(builder: ((context) => Home())));
+  //       });
+  //     }
+  //     return true;
+  //   } catch (e) {
+  //     throw (e);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
             style: fontStyle5.copyWith(color: Colors.white),
           ),
           onPressed: () {
-            login(_emailController.text, _passwordController.text);
+            // login(_emailController.text, _passwordController.text);
             print('print');
           },
         ),

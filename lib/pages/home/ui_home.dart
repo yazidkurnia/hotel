@@ -7,39 +7,39 @@ import '../../models/hotel_model.dart';
 import '../../style.dart';
 import '../../widgets/header.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class UiHome extends StatefulWidget {
+  const UiHome({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<UiHome> createState() => _UiHomeState();
 }
 
 // Future<void> getAll
 
-class _HomeState extends State<Home> {
+class _UiHomeState extends State<UiHome> {
   void initState() {
     super.initState();
-    _getData();
+    // _getData();
   }
 
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _getData();
+    // _getData();
   }
 
   List<HotelModel> dataHotel = [];
 
-  _getData() {
-    var data = HotelService().getAllData().then((value) {
-      print(value);
-      if (value.isNotEmpty) {
-        setState(() {
-          dataHotel = value;
-        });
-        print(dataHotel);
-      }
-    });
-  }
+  // _getData() {
+  //   var data = HotelService().getAllData().then((value) {
+  //     print(value);
+  //     if (value.isNotEmpty) {
+  //       setState(() {
+  //         dataHotel = value;
+  //       });
+  //       print(dataHotel);
+  //     }
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {

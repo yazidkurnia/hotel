@@ -1,10 +1,10 @@
 class HotelModel {
   String? createdAt;
   String? namaHotel;
-  int? rate;
+  String? rate;
   String? alamat;
   String? image;
-  int? biayaSewa;
+  String? biayaSewa;
   String? id;
 
   HotelModel(
